@@ -17,6 +17,7 @@ namespace EComWeb.Data
                 .OwnsOne(x=>x.ShipToAddress);
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Information> Information { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Manufacture> Manufactures { get; set; }
         public DbSet<Basket> Baskets {get; set;}

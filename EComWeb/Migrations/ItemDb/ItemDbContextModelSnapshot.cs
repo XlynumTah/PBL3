@@ -85,6 +85,43 @@ namespace EComWeb.Migrations.ItemDb
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("EComWeb.Models.Information", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Camera")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Processor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RAM")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Screen")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Storage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Information");
+                });
+
             modelBuilder.Entity("EComWeb.Models.Manufacture", b =>
                 {
                     b.Property<int>("Id")
@@ -151,9 +188,6 @@ namespace EComWeb.Migrations.ItemDb
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Discount")
                         .HasColumnType("decimal(18,2)");
 
@@ -161,31 +195,43 @@ namespace EComWeb.Migrations.ItemDb
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ManufactureId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Picture")
+                    b.Property<string>("PictureUri")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<int>("ProductCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductInformationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductManufactureId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
+
+                    b.Property<string>("Ram")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("ProductCategoryId");
 
-                    b.HasIndex("ManufactureId");
+                    b.HasIndex("ProductInformationId");
+
+                    b.HasIndex("ProductManufactureId");
 
                     b.ToTable("Products");
                 });
@@ -280,21 +326,29 @@ namespace EComWeb.Migrations.ItemDb
 
             modelBuilder.Entity("EComWeb.Models.Product", b =>
                 {
-                    b.HasOne("EComWeb.Models.Category", "Category")
+                    b.HasOne("EComWeb.Models.Category", "ProductCategory")
                         .WithMany()
-                        .HasForeignKey("CategoryId")
+                        .HasForeignKey("ProductCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EComWeb.Models.Manufacture", "Manufacture")
+                    b.HasOne("EComWeb.Models.Information", "ProductInformation")
                         .WithMany()
-                        .HasForeignKey("ManufactureId")
+                        .HasForeignKey("ProductInformationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.HasOne("EComWeb.Models.Manufacture", "ProductManufacture")
+                        .WithMany()
+                        .HasForeignKey("ProductManufactureId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Manufacture");
+                    b.Navigation("ProductCategory");
+
+                    b.Navigation("ProductInformation");
+
+                    b.Navigation("ProductManufacture");
                 });
 
             modelBuilder.Entity("EComWeb.Models.Basket", b =>

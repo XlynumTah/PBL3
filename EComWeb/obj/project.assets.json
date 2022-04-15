@@ -2272,11 +2272,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\binnh\\source\\repos\\PBL3\\EComWeb\\EComWeb.csproj",
+      "projectUniqueName": "C:\\Users\\binnh\\source\\repos\\ECom\\EComWeb\\EComWeb.csproj",
       "projectName": "EComWeb",
-      "projectPath": "C:\\Users\\binnh\\source\\repos\\PBL3\\EComWeb\\EComWeb.csproj",
+      "projectPath": "C:\\Users\\binnh\\source\\repos\\ECom\\EComWeb\\EComWeb.csproj",
       "packagesPath": "C:\\Users\\binnh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\binnh\\source\\repos\\PBL3\\EComWeb\\obj\\",
+      "outputPath": "C:\\Users\\binnh\\source\\repos\\ECom\\EComWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",

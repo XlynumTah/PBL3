@@ -6,23 +6,17 @@ namespace EComWeb.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
         public string Name { get; set; }
 
         [DataType(DataType.Date)] public DateTime ReleaseDate { get; set; }
-        [Required]
-        public Category Category { get; set; }
-        [Required]
-        public Manufacture Manufacture { get; set; }
-        [Required]
+        public Category ProductCategory { get; set; }
+        public string Ram {get; set;}
+        public Manufacture ProductManufacture { get; set; }
+        public Information ProductInformation { get; set; }
         public decimal Price { get; set; }
-        [Required]
         public decimal Discount { get; set; }
-        [Required]
         public int Quantity { get; set; }
-        [Required]
-        public string Picture { get; set; }
-        [Required]
+        public string PictureUri { get; set; }
         public string IMEI { get; set; }
     }
 }
