@@ -1,0 +1,17 @@
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\bin\Debug\net6.0\ECom.DataAccess.deps.json
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\bin\Debug\net6.0\ECom.DataAccess.runtimeconfig.json
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\bin\Debug\net6.0\ECom.DataAccess.dll
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\bin\Debug\net6.0\ECom.DataAccess.pdb
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\bin\Debug\net6.0\ECom.Models.dll
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\bin\Debug\net6.0\ECom.Models.pdb
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ECom.DataAccess.csproj.AssemblyReference.cache
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ECom.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ECom.DataAccess.AssemblyInfoInputs.cache
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ECom.DataAccess.AssemblyInfo.cs
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ECom.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ECom.DataAccess.csproj.CopyComplete
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ECom.DataAccess.dll
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\refint\ECom.DataAccess.dll
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ECom.DataAccess.pdb
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ECom.DataAccess.genruntimeconfig.cache
+C:\Users\binnh\source\repos\PBL3\ECom.DataAccess\obj\Debug\net6.0\ref\ECom.DataAccess.dll

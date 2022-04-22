@@ -1,0 +1,14 @@
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\bin\Debug\net6.0\ECom.Ultility.deps.json
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\bin\Debug\net6.0\ECom.Ultility.runtimeconfig.json
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\bin\Debug\net6.0\ECom.Ultility.dll
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\bin\Debug\net6.0\ECom.Ultility.pdb
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\ECom.Ultility.csproj.AssemblyReference.cache
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\ECom.Ultility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\ECom.Ultility.AssemblyInfoInputs.cache
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\ECom.Ultility.AssemblyInfo.cs
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\ECom.Ultility.csproj.CoreCompileInputs.cache
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\ECom.Ultility.dll
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\refint\ECom.Ultility.dll
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\ECom.Ultility.pdb
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\ECom.Ultility.genruntimeconfig.cache
+C:\Users\binnh\source\repos\PBL3\ECom.Ultility\obj\Debug\net6.0\ref\ECom.Ultility.dll

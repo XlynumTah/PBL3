@@ -1,6 +1,6 @@
-﻿using EComWeb.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using ECom.Models;
 
 namespace EComWeb.Controllers
 {

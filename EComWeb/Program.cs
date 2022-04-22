@@ -1,20 +1,48 @@
-using EComWeb.Data;
+using ECom.DataAccess.Data;
+using ECom.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using ECom.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");;
+
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection")));
+    options.UseSqlServer(connectionString,b=>b.MigrationsAssembly("ECom.DataAccess")));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-builder.Services.AddDbContext<ItemDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ItemConnection")));
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddControllersWithViews();
+builder.Services.Configure<IdentityOptions>(options=>
+{
+    //Password settings
+    options.Password.RequireDigit=false;
+    options.Password.RequireLowercase=false;
+    options.Password.RequireUppercase=false;
+    options.Password.RequiredLength=6;
+    options.Password.RequireNonAlphanumeric=false;
 
+    //Lockout settings
+    options.Lockout.DefaultLockoutTimeSpan=TimeSpan.FromDays(1);
+    options.Lockout.MaxFailedAccessAttempts=10;
+    options.Lockout.AllowedForNewUsers=true;
+
+    //user settings
+    options.User.AllowedUserNameCharacters=
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@.";
+    options.User.RequireUniqueEmail=true;
+});
+builder.Services.ConfigureApplicationCookie(options=>
+{
+    //Cookie settings
+    options.LoginPath = "/Identity/Account/Login";
+    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+    options.SlidingExpiration = true;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
