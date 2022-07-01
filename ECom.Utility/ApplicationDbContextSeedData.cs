@@ -165,7 +165,7 @@ public class ApplicationDbContextSeedData
                         Price = 13990000,
                         Discount = 0.07m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/iphone-se-white-600x600.jpg",
+                        ImageUrl = "/img/featured/iphone-se-white-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -178,7 +178,7 @@ public class ApplicationDbContextSeedData
                         Price = 13490000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/xr.jpg",
+                        ImageUrl = "/img/featured/xr.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -191,7 +191,7 @@ public class ApplicationDbContextSeedData
                         Price = 11990000,
                         Discount = 0.29m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/reno5.jpg",
+                        ImageUrl = "/img/featured/reno5.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -204,7 +204,7 @@ public class ApplicationDbContextSeedData
                         Price = 10490000,
                         Discount = 0.23m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/reno4.jpg",
+                        ImageUrl = "/img/featured/reno4.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -217,7 +217,7 @@ public class ApplicationDbContextSeedData
                         Price = 12990000,
                         Discount = 0.15m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/opporeno6.jpg",
+                        ImageUrl = "/img/featured/opporeno6.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -230,7 +230,7 @@ public class ApplicationDbContextSeedData
                         Price = 12990000,
                         Discount = 0m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/opporeno7.jpg",
+                        ImageUrl = "/img/featured/opporeno7.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -243,7 +243,7 @@ public class ApplicationDbContextSeedData
                         Price = 7290000,
                         Discount = 0m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/realme8.jpg",
+                        ImageUrl = "/img/featured/realme8.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -256,7 +256,7 @@ public class ApplicationDbContextSeedData
                         Price = 7990000,
                         Discount = 0m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/realme9pro.jpg",
+                        ImageUrl = "/img/featured/realme9pro.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -269,7 +269,7 @@ public class ApplicationDbContextSeedData
                         Price = 4290000,
                         Discount = 0m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/realmec35.jpg",
+                        ImageUrl = "/img/featured/realmec35.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -282,7 +282,7 @@ public class ApplicationDbContextSeedData
                         Price = 2990000,
                         Discount = 0m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/samsung-galaxy-a03-xanh-thumb-600x600.jpg",
+                        ImageUrl = "/img/featured/samsung-galaxy-a03-xanh-thumb-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -295,7 +295,7 @@ public class ApplicationDbContextSeedData
                         Price = 10990000,
                         Discount = 0.18m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/samsung-galaxy-a52s-5g-mint-600x600.jpg",
+                        ImageUrl = "/img/featured/samsung-galaxy-a52s-5g-mint-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -308,7 +308,7 @@ public class ApplicationDbContextSeedData
                         Price = 23990000,
                         Discount = 0.33m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/samsung-galaxy-note-20-062220-122200-fix-600x600.jpg",
+                        ImageUrl = "/img/featured/samsung-galaxy-note-20-062220-122200-fix-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -321,7 +321,7 @@ public class ApplicationDbContextSeedData
                         Price = 25990000,
                         Discount = 0.30m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/samsung-galaxy-s21-plus-bac-600x600-600x600.jpg",
+                        ImageUrl = "/img/featured/samsung-galaxy-s21-plus-bac-600x600-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -334,7 +334,7 @@ public class ApplicationDbContextSeedData
                         Price = 30990000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/samsunggalaxys22ultra5g.jpg",
+                        ImageUrl = "/img/featured/samsunggalaxys22ultra5g.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -347,7 +347,7 @@ public class ApplicationDbContextSeedData
                         Price = 24990000,
                         Discount = 0.12m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/samsung-galaxy-z-flip-3-cream-1-600x600.jpg",
+                        ImageUrl = "/img/featured/samsung-galaxy-z-flip-3-cream-1-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -360,7 +360,7 @@ public class ApplicationDbContextSeedData
                         Price = 33990000,
                         Discount = 0.19m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/samsung-galaxy-z-fold-3-silver-1-600x600.jpg",
+                        ImageUrl = "/img/featured/samsung-galaxy-z-fold-3-silver-1-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -373,7 +373,7 @@ public class ApplicationDbContextSeedData
                         Price = 8890000,
                         Discount = 0.12m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/vivo-v21-5g-xanh-den-600x600.jpg",
+                        ImageUrl = "/img/featured/vivo-v21-5g-xanh-den-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -386,7 +386,7 @@ public class ApplicationDbContextSeedData
                         Price = 3490000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/Vivo-y15s-2021-xanh-den-660x600.jpg",
+                        ImageUrl = "/img/featured/Vivo-y15s-2021-xanh-den-660x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -399,7 +399,7 @@ public class ApplicationDbContextSeedData
                         Price = 13990000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/xiaomi-11t-pro-5g-8gb-thumb-600x600.jpeg",
+                        ImageUrl = "/img/featured/xiaomi-11t-pro-5g-8gb-thumb-600x600.jpeg",
                         IsDeleted = false,
                     },
                     new Product
@@ -412,7 +412,7 @@ public class ApplicationDbContextSeedData
                         Price = 10990000,
                         Discount = 0.1m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/Xiaomi-11T-White-1-2-3-600x600.jpg",
+                        ImageUrl = "/img/featured/Xiaomi-11T-White-1-2-3-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -425,7 +425,7 @@ public class ApplicationDbContextSeedData
                         Price = 20990000,
                         Discount = 0.05m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/Xiaomi-12-xam-thumb-mau-600x600.jpg",
+                        ImageUrl = "/img/featured/Xiaomi-12-xam-thumb-mau-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -438,7 +438,7 @@ public class ApplicationDbContextSeedData
                         Price = 7490000,
                         Discount = 0.03m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/xiaomi-redmi-note-11-pro-trang-thumb-600x600.jpg",
+                        ImageUrl = "/img/featured/xiaomi-redmi-note-11-pro-trang-thumb-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -451,7 +451,7 @@ public class ApplicationDbContextSeedData
                         Price = 7490000,
                         Discount = 0.03m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/xiaomi-redmi-note-11-pro-trang-thumb-600x600.jpg",
+                        ImageUrl = "/img/featured/xiaomi-redmi-note-11-pro-trang-thumb-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -463,7 +463,7 @@ public class ApplicationDbContextSeedData
                         Price = 175000,
                         Discount = 0.0m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/saccap/sac-khong-day-qi-10w-mbest-ac63f3-den-avatar-1-600x600.jpg",
+                        ImageUrl = "/img/featured/saccap/sac-khong-day-qi-10w-mbest-ac63f3-den-avatar-1-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -475,7 +475,7 @@ public class ApplicationDbContextSeedData
                         Price = 315000,
                         Discount = 0.0m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/tainghe/bluetooth-true-wireless-ava-ds200a-wb-thumb-600x600.png",
+                        ImageUrl = "/img/featured/tainghe/bluetooth-true-wireless-ava-ds200a-wb-thumb-600x600.png",
                         IsDeleted = false,
                     },
                     new Product
@@ -487,7 +487,7 @@ public class ApplicationDbContextSeedData
                         Price = 300000,
                         Discount = 0.05m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/tainghe/bluetooth-mozard-k8-thumb-600x600.jpeg",
+                        ImageUrl = "/img/featured/tainghe/bluetooth-mozard-k8-thumb-600x600.jpeg",
                         IsDeleted = false,
                     },
                     new Product
@@ -499,7 +499,7 @@ public class ApplicationDbContextSeedData
                         Price = 499000,
                         Discount = 0.0m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/saccap/cap-type-c-lightning-1m-apple-mm0a3-trang-thumb-600x600.jpeg",
+                        ImageUrl = "/img/featured/saccap/cap-type-c-lightning-1m-apple-mm0a3-trang-thumb-600x600.jpeg",
                         IsDeleted = false,
                     },
                     new Product
@@ -511,7 +511,7 @@ public class ApplicationDbContextSeedData
                         Price = 60000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/saccap/caplightning1mhydruscs-c-021-ava-600x600.jpg",
+                        ImageUrl = "/featured/saccap/caplightning1mhydruscs-c-021-ava-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -523,7 +523,7 @@ public class ApplicationDbContextSeedData
                         Price = 25000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/khac/tui-chong-nuoc-cosano-jmg-c-21-xanh-bien-add-600x600.jpg",
+                        ImageUrl = "/img/featured/khac/tui-chong-nuoc-cosano-jmg-c-21-xanh-bien-add-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -535,7 +535,7 @@ public class ApplicationDbContextSeedData
                         Price = 570000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/tainghe/bluetooth-jlab-jbuds-pro-signature-thumb-600x600.jpeg",
+                        ImageUrl = "/img/featured/tainghe/bluetooth-jlab-jbuds-pro-signature-thumb-600x600.jpeg",
                         IsDeleted = false,
                     },
                     new Product
@@ -547,7 +547,7 @@ public class ApplicationDbContextSeedData
                         Price = 600000,
                         Discount = 0.1m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/tainghe/bluetooth-jlab-jbuds-pro-signature-thumb-600x600.jpeg",
+                        ImageUrl = "/img/featured/tainghe/bluetooth-jlab-jbuds-pro-signature-thumb-600x600.jpeg",
                         IsDeleted = false,
                     },
                     new Product
@@ -559,7 +559,7 @@ public class ApplicationDbContextSeedData
                         Price = 520000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/saccap/ava-plus-ds005-pp-ava-600x600.jpg",
+                        ImageUrl = "/img/featured/saccap/ava-plus-ds005-pp-ava-600x600.jpg",
                         IsDeleted = false,
                     },
                     new Product
@@ -571,7 +571,7 @@ public class ApplicationDbContextSeedData
                         Price = 560000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/tainghe/bluetooth-true-wireless-rezo-f15-thumb-600x600.jpeg",
+                        ImageUrl = "/img/featured/tainghe/bluetooth-true-wireless-rezo-f15-thumb-600x600.jpeg",
                         IsDeleted = false,
                     },
                      new Product
@@ -583,7 +583,7 @@ public class ApplicationDbContextSeedData
                         Price = 4990000,
                         Discount = 0.05m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/tainghe/bluetooth-airpods-pro-magsafe-charge-apple-mlwk3-thumb-600x600.jpg",
+                        ImageUrl = "/img/featured/tainghe/bluetooth-airpods-pro-magsafe-charge-apple-mlwk3-thumb-600x600.jpg",
                         IsDeleted = false,
                     },
                      new Product
@@ -595,7 +595,7 @@ public class ApplicationDbContextSeedData
                         Price = 520000,
                         Discount = 0.05m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/saccap/adapter-sac-type-c-20w-cho-iphone-ipad-apple-mhje3-avatar-1-1-600x600.jpg",
+                        ImageUrl = "/img/featured/saccap/adapter-sac-type-c-20w-cho-iphone-ipad-apple-mhje3-avatar-1-1-600x600.jpg",
                         IsDeleted = false,
                     },
                       new Product
@@ -607,7 +607,7 @@ public class ApplicationDbContextSeedData
                         Price = 30000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/khac/bo-2-moc-dien-thoai-osmia-ck-crs10-meo-ca-heo-xanhava-600x600.jpg",
+                        ImageUrl = "/img/featured/khac/bo-2-moc-dien-thoai-osmia-ck-crs10-meo-ca-heo-xanhava-600x600.jpg",
                         IsDeleted = false,
                     },
                       new Product
@@ -619,7 +619,7 @@ public class ApplicationDbContextSeedData
                         Price = 5490000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/tainghe/airpods-3-hop-sac-khong-day-thumb-600x600.jpeg",
+                        ImageUrl = "/img/featured/tainghe/airpods-3-hop-sac-khong-day-thumb-600x600.jpeg",
                         IsDeleted = false,
                     },
                        new Product
@@ -631,7 +631,7 @@ public class ApplicationDbContextSeedData
                         Price = 99000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/oplung/op-lung-nhua-deo-realme-c35-tpu-techlife-thumb-600x600.jpg",
+                        ImageUrl = "/img/featured/oplung/op-lung-nhua-deo-realme-c35-tpu-techlife-thumb-600x600.jpg",
                         IsDeleted = false,
                     },
                        new Product
@@ -643,7 +643,7 @@ public class ApplicationDbContextSeedData
                         Price = 210000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/saccap/adapter-sac-2-cong-type-c-pd-qc30-xmobile-qp-1eu-avatar-1-600x600.jpg",
+                        ImageUrl = "/img/featured/saccap/adapter-sac-2-cong-type-c-pd-qc30-xmobile-qp-1eu-avatar-1-600x600.jpg",
                         IsDeleted = false,
                     },
                        new Product
@@ -655,7 +655,7 @@ public class ApplicationDbContextSeedData
                         Price = 30000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/khac/bo-2-moc-dien-thoai-osmia-ck-crs34-xanh-hongava-600x600.jpg",
+                        ImageUrl = "/img/featured/khac/bo-2-moc-dien-thoai-osmia-ck-crs34-xanh-hongava-600x600.jpg",
                         IsDeleted = false,
                     },
                        new Product
@@ -667,7 +667,7 @@ public class ApplicationDbContextSeedData
                         Price = 795000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/oplung/op-lung-magsafe-iphone-13-pro-max-nhua-deo-apple-mm2p3-160122-074022-600x600.jpg",
+                        ImageUrl = "/img/featured/oplung/op-lung-magsafe-iphone-13-pro-max-nhua-deo-apple-mm2p3-160122-074022-600x600.jpg",
                         IsDeleted = false,
                     },
                         new Product
@@ -679,7 +679,7 @@ public class ApplicationDbContextSeedData
                         Price = 234000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/saccap/adapter-bluetooth-xmobile-bt14-den-avatar-1-600x600.jpg",
+                        ImageUrl = "/img/featured/saccap/adapter-bluetooth-xmobile-bt14-den-avatar-1-600x600.jpg",
                         IsDeleted = false,
                     },
                         new Product
@@ -691,7 +691,7 @@ public class ApplicationDbContextSeedData
                         Price = 244000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/tainghe/tai-nghe-bluetooth-mozard-flex4-den-xanh-thumb-2-600x600.jpeg",
+                        ImageUrl = "/img/featured/tainghe/tai-nghe-bluetooth-mozard-flex4-den-xanh-thumb-2-600x600.jpeg",
                         IsDeleted = false,
                     },
                         new Product
@@ -703,7 +703,7 @@ public class ApplicationDbContextSeedData
                         Price = 795000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/khac/de-dien-thoai-xe-hoi-magsafe-belkin-wic002btgr-041121-085128-600x600.jpg",
+                        ImageUrl = "/img/featured/khac/de-dien-thoai-xe-hoi-magsafe-belkin-wic002btgr-041121-085128-600x600.jpg",
                         IsDeleted = false,
                     },
                          new Product
@@ -715,7 +715,7 @@ public class ApplicationDbContextSeedData
                         Price = 895000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/oplung/op-lung-magsafe-iphone-13-pro-max-da-apple-mm1r3-160122-042316-600x600.jpg",
+                        ImageUrl = "/img/featured/oplung/op-lung-magsafe-iphone-13-pro-max-da-apple-mm1r3-160122-042316-600x600.jpg",
                         IsDeleted = false,
                     },
                          new Product
@@ -727,7 +727,7 @@ public class ApplicationDbContextSeedData
                         Price = 384000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/khac/de-dien-thoai-xe-hoi-vent-mount-belkin-f7u017bt-den-thumb-600x600.jpg",
+                        ImageUrl = "/img/featured/khac/de-dien-thoai-xe-hoi-vent-mount-belkin-f7u017bt-den-thumb-600x600.jpg",
                         IsDeleted = false,
                     },
                          new Product
@@ -739,7 +739,7 @@ public class ApplicationDbContextSeedData
                         Price = 531000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/oplung/op-lung-galaxy-s22-ultra-nhua-cung-vien-deo-samsung-thumb-600x600.jpg",
+                        ImageUrl = "/img/featured/oplung/op-lung-galaxy-s22-ultra-nhua-cung-vien-deo-samsung-thumb-600x600.jpg",
                         IsDeleted = false,
                     },
                          new Product
@@ -751,7 +751,7 @@ public class ApplicationDbContextSeedData
                         Price = 500000,
                         Discount = 0.15m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/tainghe/tai-nghe-bluetooth-kanen-k6-thumb-600x600.jpeg",
+                        ImageUrl = "/img/featured/tainghe/tai-nghe-bluetooth-kanen-k6-thumb-600x600.jpeg",
                         IsDeleted = false,
                     },
                          new Product
@@ -763,7 +763,7 @@ public class ApplicationDbContextSeedData
                         Price = 700000,
                         Discount = 0.1m,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/oplung/op-lung-galaxy-s22-silicone-samsung-xanh-forest-1.-600x600.jpg",
+                        ImageUrl = "/img/featured/oplung/op-lung-galaxy-s22-silicone-samsung-xanh-forest-1.-600x600.jpg",
                         IsDeleted = false,
                     },
                          new Product
@@ -775,7 +775,7 @@ public class ApplicationDbContextSeedData
                         Price = 25000,
                         Discount = 0,
                         Quantity = 9999,
-                        ImageUrl = "img/featured/khac/tui-chong-nuoc-cosano-jmg-c-20-xanh-la-add-600x600.jpg",
+                        ImageUrl = "/img/featured/khac/tui-chong-nuoc-cosano-jmg-c-20-xanh-la-add-600x600.jpg",
                         IsDeleted = false,
                     },
                 };
@@ -785,5 +785,6 @@ public class ApplicationDbContextSeedData
                     context.SaveChanges();
                 }
             }
-        }
     }
+        
+}

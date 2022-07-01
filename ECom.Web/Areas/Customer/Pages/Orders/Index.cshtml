@@ -1,0 +1,78 @@
+﻿@*@page
+@using ECom.Models
+@model ECom.Web.Areas.Customer.Pages.Orders.IndexModel
+
+@{
+    ViewData["Title"] = "Orders";
+}
+
+@if(Model.AllUserOrders.Count==0)
+{
+    <span>You has no order</span>
+}
+else
+{
+    <table>
+    <tr>
+        <th>Order Id</th>
+        <th>Total Price</th>
+        <th>Order Status</th>
+        <th>Detail</th>
+    </tr>
+    @foreach (var order in Model.AllUserOrders)
+    {
+        <tr>
+            <td>@order.Id</td>
+            <td>@order.TotalPrice</td>
+            <td>@order.CurrentOrderStatus.Name.ToString()</td>
+            <td><a asp-page="./Detail" asp-route-orderId="@order.Id" >Detail</a></td>
+        </tr>
+    }
+</table>
+}*@
+
+@page
+@using ECom.Models
+@model ECom.Web.Areas.Customer.Pages.Orders.IndexModel
+
+
+@{
+    
+    ViewData["Title"] = "Orders";
+}
+
+<section class="breadcrumb-section set-bg" data-setbg="/img/product/details/iphone13promax/apple-banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>@ViewData["Title"]</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<br/>
+
+<div class="container">
+<table class="table table-striped" id="userTable">
+    <thead>
+    <tr>
+        <th>ID</th><th>Tổng tiền</th><th style="width:10%">Trạng thái</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var order in Model.AllUserOrders)
+    {
+        <tr>
+            <td>@order.Id</td>
+            <td>@order.TotalPrice.ToString("N0")</td>
+            <td>@order.CurrentOrderStatus.Name.ToString()</td>
+            <td><a asp-page="./Detail" asp-route-orderId="@order.Id" >Detail</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>
+<br/>

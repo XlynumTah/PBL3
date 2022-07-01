@@ -1,0 +1,75 @@
+﻿@page
+@model ECom.Web.Areas.Customer.Pages.Basket.CheckoutModel
+
+@{
+    Layout = "/Areas/Management/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["Title"] = "Checkout";
+}
+
+<section class="breadcrumb-section set-bg" data-setbg="/img/product/details/iphone13promax/apple-banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>VUI LÒNG XÁC NHẬN THÔNG TIN ĐƠN HÀNG</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<br/>
+
+<section class="checkout spad">
+        <div class="container">
+            <div class="checkout__form">
+                <h4>Thông tin đơn hàng</h4>
+                <form method="post">
+                            <div class="checkout__order">
+                                <h4>Đơn hàng của bạn</h4>
+                                <div class="checkout__order__products">Sản phẩm <span>Tổng tiền</span></div>
+                                    @if (Model.BasketViewModel.Items.Any())
+                                    {
+                                        @for (int i = 0; i < Model.BasketViewModel.Items.Count; i++) 
+                                        {
+                                            var item = Model.BasketViewModel.Items[i];
+                                            <ul>
+                                            <li>@item.ProductName<span>@Math.Round(item.Quantity * item.UnitPrice, 2).ToString("N0")đ</span></li>
+                                            </ul>
+                                        }
+                                    }
+@*                                    <li>Sản phẩm A <span>0</span></li>
+                                    <li>Sản phẩm B <span>0</span></li>
+                                    <li>Sản phẩm C <span>0</span></li>*@
+                                
+                                <div class="checkout__order__subtotal">Tổng tiền <span>@Model.BasketViewModel.Total().ToString("N0")</span></div>
+                                <div class="checkout__order__total">Tổng thanh toán <span>@Model.BasketViewModel.Total().ToString("N0")</span></div>
+                                <div class="checkout__input__checkbox">
+                                    <label for="payment">
+                                        Thanh toán bằng tiền mặt
+                                        <input type="checkbox" id="payment">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="checkout__input__checkbox">
+                                    <label for="paypal">
+                                        Thanh toán bằng thẻ ngân hàng hoặc ví điện tử
+                                        <input type="checkbox" id="paypal">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn esh-basket-checkout">Xác nhận đơn hàng</button>
+                            </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+@*<div class="container">
+    @if (Model.BasketViewModel.Items.Any())
+    {
+        <form asp-page="Checkout" method="post">
+            
+        </form>
+    }
+</div>*@

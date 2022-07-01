@@ -1,0 +1,207 @@
+﻿    <meta charset="UTF-8">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">MobileWorld</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Bảo mật</a>
+                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Management" asp-page="/Admin">Admin</a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a class="nav-link text-dark" asp-area="Customer" asp-page="/Basket/Index">Giỏ hàng</a>
+                        }
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a class="nav-link text-dark" asp-area="Customer" asp-page="/Orders/Index">Đơn hàng của bạn</a>
+                        }
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<div>
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="/img/logo.jpg" alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>0</span></a></li>
+                <li><a href="./shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li>
+            </ul>
+            <div class="header__cart__price">Tổng tiền: <span>0đ</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+        </div>
+        <nav class="humberger__menu__nav humberger-menu">
+            <ul>
+                <li class="active"><a href="./index.html">TRANG CHỦ</a></li>
+                <li><a href="./shoping-cart.html">GIỎ HÀNG</a></li>
+                <li><a href="./contact.html">LIÊN HỆ VỚI CHÚNG TÔI</a></li>
+            </ul>
+        </nav>
+        <div id="humberger-menu-wrap"></div>
+        
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> Welcome2002@gmail.com</li>
+                <li>Miễn phí vận chuyển cho đơn hàng từ 3.000.000đ</li>
+            </ul>
+        </div>
+    </div>
+        <header class="header">
+        
+    </header>
+        <section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Quản lý tài khoản</span>
+                        </div>
+                        <ul>
+                            <li><a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index" > Thông tin cá nhân</a></li>
+                            <li><a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Tài khoản</a></li>
+                            <li><a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Mật khẩu</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <div class="hero__search__categories">
+                                    Tất cả sản phẩm
+                                    <span class="arrow_carrot-down"></span>
+                                </div>
+                                <input type="text" placeholder="Bạn cần tìm kiếm sản phẩm nào?">
+                                <button type="submit" class="site-btn">TÌM KIẾM</button>
+                            </form>
+                        </div>
+                        <div class="hero__search__phone">
+                            <div class="hero__search__phone__icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="hero__search__phone__text">
+                                <h5>+84 334.840.864</h5>
+                                <span>Hỗ trợ 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="breadcrumb-section set-bg" data-setbg="/img/product/details/iphone13promax/apple-banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Vui lòng hoàn tất thông tin của bạn</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            @RenderBody()
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="/img/logo.jpg" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Địa chỉ: Trường Đại học Bách Khoa - Đại Học Đà Nẵng</li>
+                            <li>Phone: +84 334 840 864</li>
+                            <li>Email: Welcome2002@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Hỗ Trợ - Dịch Vụ</h6>
+                        <ul>
+                            <li><a href="#">Mua hàng trả góp</a></li>
+                            <li><a href="#">Hướng dẫn đặt hàng và thanh toán</a></li>
+                            <li><a href="#">Chính sách bảo hành</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                            <li><a href="#">Tra cứu đơn hàng</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Chính sách hủy giao dịch, đổi trả</a></li>
+                            <li><a href="#">Chính sách giải quyết khiếu nại</a></li>
+                            <li><a href="#">Điều khoản mua bán hàng hóa</a></li>
+                            <li><a href="#">Phạm vi, điều khoản gói bảo hành mở rộng</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Liên hệ với chúng tôi ngay</h6>
+                        <p>Nhận thông tin cập nhật qua Email về sảm phẩm mới nhất của chúng tôi và các ưu đãi đặc biệt cho khách hàng.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Nhập Email của bạn">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.nice-select.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/mixitup.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}
+    @await RenderSectionAsync("Scripts", required: false)

@@ -5,7 +5,11 @@ using Microsoft.AspNetCore.Identity;
 
 namespace ECom.DataAccess.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    /// <summary>
+    /// Thừa kế từ IdentityDbContext với 2 custom model là ApplicationUser và ApplicationRole,
+    /// Khóa chính cả 2 là int
+    /// </summary>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Int32>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -14,13 +18,27 @@ namespace ECom.DataAccess.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            //đổi tên bảng thành User
             modelBuilder.Entity<ApplicationUser>().ToTable("User");
-            modelBuilder.Entity<IdentityRole>().ToTable("Role");
-            modelBuilder.Entity<IdentityUserClaim<string>>().ToTable("UserClaim");
-            modelBuilder.Entity<IdentityUserRole<string>>().ToTable("UserRole");
-            modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogin");
-            modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaim");
-            modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserToken");
+            //đổi tên bảng thành Role
+            modelBuilder.Entity<ApplicationRole>().ToTable("Role");
+            //đổi tên bảng thành UserClaim
+            modelBuilder.Entity<IdentityUserClaim<Int32>>().ToTable("UserClaim");
+            //đổi tên bảng thành UserRole
+            modelBuilder.Entity<IdentityUserRole<Int32>>().ToTable("UserRole");
+            //đổi tên bảng thành UserLogin
+            modelBuilder.Entity<IdentityUserLogin<Int32>>().ToTable("UserLogin");
+            //đổi tên bảng thành RoleClaim
+            modelBuilder.Entity<IdentityRoleClaim<Int32>>().ToTable("RoleClaim");
+            //đổi tên bảng thành UserToken
+            modelBuilder.Entity<IdentityUserToken<Int32>>().ToTable("UserToken");
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Specification)
+                .WithOne(s => s.Product)
+                .HasForeignKey<Specification>(s => s.ProductId);
+            modelBuilder.Entity<OrderStatus>()
+                .Property(os => os.Name)
+                .HasConversion<string>();
             // modelBuilder.Entity<Category>()
             //     .HasMany(c => c.Products)
             //     .WithOne(p => p.Category)
@@ -29,10 +47,7 @@ namespace ECom.DataAccess.Data
             //     .HasMany(c => c.Products)
             //     .WithOne(p => p.Manufacture)
             //     .HasForeignKey(p => p.ManufactureId);
-            modelBuilder.Entity<Product>()
-                .HasOne(p => p.Specification)
-                .WithOne(s => s.Product)
-                .HasForeignKey<Specification>(s=>s.ProductId);
+            //Quan hệ 1-1 Product và Specification
             // modelBuilder.Entity<Basket>()
             //     .HasMany(b => b.Items)
             //     .WithOne(i => i.Basket)
@@ -51,10 +66,10 @@ namespace ECom.DataAccess.Data
             // modelBuilder.Entity<OrderItem>()
             //     .HasOne(oi => oi.Product)
             //     .WithMany();
-            modelBuilder.Entity<OrderItem>()
-                .OwnsOne(x=>x.ItemOrdered);
-            modelBuilder.Entity<Order>()
-                .OwnsOne(x=>x.ShipToAddress);
+            // modelBuilder.Entity<OrderItem>()
+            //     .OwnsOne(x=>x.ItemOrdered);
+            // modelBuilder.Entity<Order>()
+            //     .OwnsOne(x=>x.ShipToAddress);
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Specification> Specifications { get; set; }

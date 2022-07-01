@@ -1,0 +1,416 @@
+﻿
+@model ECom.Models.Product
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+@{
+    ViewData["Title"] = "Details";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <section class="breadcrumb-section set-bg" data-setbg="/img/product/details/iphone13promax/apple-banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>@Html.DisplayFor(model => model.Name)</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large"
+                                src="@Html.DisplayFor(model => model.ImageUrl)" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                        
+                        <h3>@Html.DisplayFor(model => model.Name)</h3>
+                        <div class="product__details__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span>(18 reviews)</span>
+                        </div>
+                        <p>
+                        </p>
+                        <a href="#" class="primary-btn1">Vàng đồng</a>
+                        <a href="#" class="primary-btn1">Xám</a>
+                        <a href="#" class="primary-btn1">Bạc</a>
+                        <a href="#" class="primary-btn1">Xanh dương</a>
+                        <p>
+                        </p>
+                        <a href="#" class="primary-btn1">Mặc định: 128GB</a>
+                        <p>
+                        </p>
+                        <div class="product__details__price">@Html.DisplayFor(model => model.Price)</div>
+                        <p>@Html.DisplayFor(model => model.Description)
+                        
+                        <form asp-area="Customer" asp-page="/Basket/Index" method="post">
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input type="text" value="1" name="quantity" id="quantity">
+                                </div>
+                            </div>
+                        </div>
+                            <input type="hidden" asp-for="@Model.Id" name="id"/>        
+                            <button type="Submit" class="primary-btn">Thêm vào giỏ hàng</button>
+                        </form>
+                        <ul>
+                            <li><b>Tình trạng</b> <span>Còn hàng</span></li>
+                            <li><b>Vận chuyển</b> <span>Từ 1-3 ngày</span></li>
+                            <li><b>Chia sẻ</b>
+                                <div class="share">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="product__details__tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                                    aria-selected="true">Mô tả</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
+                                    aria-selected="false">Thông số</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
+                                    aria-selected="false">Đánh giá<span>(0)</span></a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <h6>Thông tin sản phẩm</h6>
+                                    <p>@Html.DisplayFor(model => model.Description)</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                    <img src="//cdn.tgdd.vn/Products/Images/42/230529/Kit/iphone-13-pro-max-n-2.jpg" alt="iPhone 13 Pro Max 128GB" class="cangiua">
+                                    <table class="table table-border">
+                                        <tbody><tr>
+                                            <th colspan="2"><span class="f-16">Màn hình:</span></th>
+                                        </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Công nghệ màn hình</strong></td>
+                                                <td>
+                                                        <span>OLED</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Độ phân giải</strong></td>
+                                                <td>
+                                                        <span>1284 x 2778 Pixels</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Độ sáng tối đa:</strong></td>
+                                                <td>
+                                                        <span>1200 nits</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Mặt kính cảm ứng</strong></td>
+                                                <td>
+                                                        <span>Kính cường lực Ceramic Shield</span>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <th colspan="2"><span class="f-16">Camera sau</span></th>
+                                        </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Độ phân giải</strong></td>
+                                                <td>
+                                                        <span>3 camera 12 MP</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Quay phim</strong></td>
+                                                <td>
+                                                        <ol class="ol-specs">
+                                                                <li>4K 2160p@24fps</li>
+                                                                <li>4K 2160p@30fps</li>
+                                                                <li>4K 2160p@60fps</li>
+                                                                <li>FullHD 1080p@240fps</li>
+                                                                <li>FullHD 1080p@120fps</li>
+                                                                <li>FullHD 1080p@30fps</li>
+                                                                <li>FullHD 1080p@60fps</li>
+                                                                <li>HD 720p@30fps</li>
+                                                        </ol>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Tính năng</strong></td>
+                                                <td>
+                                                        <ol class="ol-specs">
+                                                                <li>Ban đêm (Night Mode)</li>
+                                                                <li>Trôi nhanh thời gian (Time Lapse)</li>
+                                                                <li>Quay chậm (Slow Motion)</li>
+                                                                <li>Xóa phông</li>
+                                                                <li>Zoom quang học</li>
+                                                                <li>Chạm lấy nét</li>
+                                                                <li>Toàn cảnh (Panorama)</li>
+                                                                <li>Chống rung quang học (OIS)</li>
+                                                                <li>Tự động lấy nét (AF)</li>
+                                                                <li>Nhận diện khuôn mặt</li>
+                                                                <li>HDR</li>
+                                                                <li>Ảnh Raw</li>
+                                                                <li>Dolby Vision HDR</li>
+                                                                <li>Zoom kỹ thuật số</li>
+                                                                <li>Góc rộng (Wide)</li>
+                                                                <li>Siêu cận (Macro)</li>
+                                                                <li>Góc siêu rộng (Ultrawide)</li>
+                                                        </ol>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <th colspan="2"><span class="f-16">Camera trước</span></th>
+                                        </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Độ phân giải</strong></td>
+                                                <td>
+                                                        <span>12 MP</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Tính năng</strong></td>
+                                                <td>
+                                                        <ol class="ol-specs">
+                                                                <li>Xóa phông</li>
+                                                                <li>Quay video 4K</li>
+                                                                <li>Quay video HD</li>
+                                                                <li>Nhận diện khuôn mặt</li>
+                                                                <li>Quay video Full HD</li>
+                                                                <li>Tự động lấy nét (AF)</li>
+                                                                <li>HDR</li>
+                                                        </ol>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <th colspan="2"><span class="f-16">Hệ điều hành &amp; CPU</span></th>
+                                        </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Hệ điều hành</strong></td>
+                                                <td>
+                                                        <span>iOS 15</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Chip xử lý (CPU)</strong></td>
+                                                <td>
+                                                        <span>Apple A15 Bionic 6 nhân</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Tốc độ CPU</strong></td>
+                                                <td>
+                                                        <span>Đang cập nhật</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Chip đồ họa (GPU)</strong></td>
+                                                <td>
+                                                        <span>Apple GPU 5 nhân</span>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <th colspan="2"><span class="f-16"> Bộ nhớ &amp; Lưu trữ</span></th>
+                                        </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>RAM</strong></td>
+                                                <td>
+                                                        <span>6 GB</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Bộ nhớ trong (ROM)</strong></td>
+                                                <td>
+                                                        <span>128 GB</span>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <th colspan="2"><span class="f-16">Kết nối</span></th>
+                                        </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Mạng di động</strong></td>
+                                                <td>
+                                                        <span>Hỗ trợ 5G</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Số khe sim</strong></td>
+                                                <td>
+                                                        <span>1 Nano SIM &amp; 1 eSIM</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Wifi</strong></td>
+                                                <td>
+                                                        <ol class="ol-specs">
+                                                                <li>Dual-band (2.4 GHz/5 GHz)</li>
+                                                                <li>Wi-Fi 802.11 a/b/g/n/ac/ax</li>
+                                                                <li>Wi-Fi MIMO</li>
+                                                                <li>Wi-Fi hotspot</li>
+                                                        </ol>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>GPS</strong></td>
+                                                <td>
+                                                        <ol class="ol-specs">
+                                                                <li>BDS</li>
+                                                                <li>GALILEO</li>
+                                                                <li>QZSS</li>
+                                                                <li>GLONASS</li>
+                                                                <li>A-GPS</li>
+                                                                <li>iBeacon</li>
+                                                        </ol>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Bluetooth</strong></td>
+                                                <td>
+                                                        <ol class="ol-specs">
+                                                                <li>v5.0</li>
+                                                                <li>A2DP</li>
+                                                                <li>LE</li>
+                                                        </ol>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Cổng kết nối/sạc</strong></td>
+                                                <td>
+                                                        <span>Lightning</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Jack tai nghe</strong></td>
+                                                <td>
+                                                        <span>Lightning</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Kết nối khác	</strong></td>
+                                                <td>
+                                                        <span>NFC</span>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <th colspan="2"><span class="f-16">Pin &amp; Sạc</span></th>
+                                        </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Loại pin</strong></td>
+                                                <td>
+                                                        <span>Li-Ion</span>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <th colspan="2"><span class="f-16">Tiện ích</span></th>
+                                        </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Bảo mật nâng cao	</strong></td>
+                                                <td>
+                                                        <span>Mở khoá khuôn mặt Face ID</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Ghi âm</strong></td>
+                                                <td>
+                                                        <span>Có (microphone chuyên dụng chống ồn)</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Xem phim</strong></td>
+                                                <td>
+                                                        <span>H.264(MPEG4-AVC)</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Nghe nhạc</strong></td>
+                                                <td>
+                                                        <ol class="ol-specs">
+                                                                <li>Lossless</li>
+                                                                <li>FLAC</li>
+                                                                <li>AAC</li>
+                                                        </ol>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <th colspan="2"><span class="f-16">Thông tin chung</span></th>
+                                        </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Thiết kế:</strong></td>
+                                                <td>
+                                                        <span>Nguyên khối</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Chất liệu:</strong></td>
+                                                <td>
+                                                        <span>Khung thép không gỉ &amp; Mặt lưng kính cường lực</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Thời điểm ra mắt:</strong></td>
+                                                <td>
+                                                        <span>09/2021</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-gray"><strong>Kích thước, khối lượng:</strong></td>
+                                                <td>
+                                                        <span>Dài 160.8 mm - Ngang 78.1 mm - Dày 7.65 mm - Nặng 240 g</span>
+                                                </td>
+                                            </tr>
+                                </tbody></table>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                                <div class="product__details__tab__desc">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.nice-select.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/mixitup.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    </body>

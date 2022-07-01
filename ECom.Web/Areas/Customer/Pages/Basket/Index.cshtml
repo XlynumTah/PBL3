@@ -1,0 +1,248 @@
+﻿@page
+@using Microsoft.AspNetCore.Http.Features
+@model ECom.Web.Areas.Customer.Pages.Basket.IndexModel
+
+@{
+
+    ViewData["Title"] = "Basket";
+    var items = new List<BasketItemViewModel>();
+    foreach (var VARIABLE in Model.BasketViewModel.Items)
+    {
+        items.Add(VARIABLE);
+    }
+}
+<section class="breadcrumb-section set-bg" data-setbg="/img/product/details/iphone13promax/apple-banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>GIỎ HÀNG CỦA BẠN</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<br/>
+
+<section class="shoping-cart spad">
+    <form method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                        <div class="shoping__cart__table">
+                            <table>
+                                <thread>
+                                <tr>
+                                        <th class="shoping__product">Sản phẩm</th>
+                                        <th>Giá tiền</th>
+                                        <th>Số lượng</th>
+                                        <th>Tổng cộng</th>
+                                        <th></th>
+                                    </tr>
+                                </thread>
+                                <tbody>
+                                        @if (Model.BasketViewModel.Items.Any())
+                                        {
+                                            @for (int i = 0; i < Model.BasketViewModel.Items.Count; i++) 
+                                            {
+                                                var item = Model.BasketViewModel.Items[i];
+                                                <tr>
+                                                    <td class="shoping__cart__item">
+                                                        <img class="esh-basket-image" src="@item.ImageUrl"/>
+                                                        <h5>@item.ProductName</h5>
+                                                    </td>
+                                                    <td class="shoping__cart__price">
+                                                        @item.UnitPrice.ToString("N0")
+                                                    </td>
+                                                    <td class="shoping__cart__quantity">
+                                                        <div class="quantity">
+                                                            <div class="esh-basket-input" min="0" >
+                                                                <section class="esh-basket-item esh-basket-item--middle col-sm-2">
+                                                                <input type="hidden" asp-for="@items[i].Id" value="@item.Id"/>
+                                                                <input type="hidden" asp-for="@items[i].ProductItemId" value="@item.ProductItemId"/>
+                                                                <input type="number" class="esh-basket-input" min="0" asp-for="@items[i].Quantity" value="@item.Quantity"./>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="shoping__cart__total">
+                                                        @Math.Round(item.Quantity * item.UnitPrice, 2).ToString("N0")đ
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="shoping__cart__btns">
+                                    <a href="https://localhost:7248/" class="primary-btn cart-btn">TIẾP TỤC MUA SẮM?</a>
+                                    <button type="submit" asp-page-handler="Update" class="primary-btn cart-btn cart-btn-right" ><span class="icon_loading"></span>
+                                        Cập nhật lại giỏ hàng</button>
+                                    @*<a href="#" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
+                                        Cập nhật lại giỏ hàng</a>*@
+                                </div>
+                                <div class="shoping__checkout">
+                                    <h5>Tổng tiền giỏ hàng</h5>
+                                    <ul>
+                                        <li>Tổng cộng <span>@Model.BasketViewModel.Total().ToString("N0")</span></li>
+                                        <li>Phí vận chuyển<span>Miễn phí</span></li>
+                                        <li>Tổng thanh toán <span>@Model.BasketViewModel.Total().ToString("N0")</span></li>
+                                    </ul>
+                                    <a asp-page="./Checkout"  class="primary-btn" formaction="./Basket/Checkout" >THANH TOÁN ĐƠN HÀNG</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>    
+            </div>
+        </div>
+    </form>
+</section>
+
+
+
+
+
+@*<div class="container">
+    <h1>
+
+    </h1>
+    @if (Model.BasketViewModel.Items.Any())
+    {
+        <form method="post">
+            <div class="esh-catalog-items row">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                @for (int i = 0; i < Model.BasketViewModel.Items.Count; i++)
+                {
+                    var item = Model.BasketViewModel.Items[i];
+                    <article class="esh-basket-items row">
+                        <section class="esh-basket-item esh-basket-item--middle col-lg-3 hidden-lg-down">
+                            <img class="esh-basket-image" src="@item.ImageUrl"/></section>
+                        <section class="esh-basket-item esh-basket-item--middle col-sm-3">@item.ProductName</section>
+                        <section class="esh-basket-item esh-basket-item--middle col-sm-2">@item.UnitPrice.ToString("N2")</section>
+                        <section class="esh-basket-item esh-basket-item--middle col-sm-2">
+                            <input type="hidden" asp-for="@items[i].Id" value="@item.Id"/>
+                            <input type="hidden" asp-for="@items[i].ProductItemId" value="@item.ProductItemId"/>
+                            <input type="number" class="esh-basket-input" min="0" asp-for="@items[i].Quantity" value="@item.Quantity"./></section>
+                        <section class="esh-basket-item esh-basket-item--middle esh-basket-item--mark col-sm-2">
+                            $ @Math.Round(item.Quantity * item.UnitPrice, 2).ToString("N2")
+                        </section>
+                    </article>
+                }
+                
+                <div class="container">
+                    <article class="esh-basket-titles esh-basket-titles--clean row">
+                        <section class="esh-basket-title col-sm-10"></section>
+                        <section class="esh-basket-title col-sm-2">Total</section>
+                    </article>
+                    
+                    <article class="esh-basket-items row">
+                        <section class="esh-basket-item col-sm-10"></section>
+                        <section class="esh-basket-item esh-basket-item--mark col-sm-2">$ @Model.BasketViewModel.Total().ToString("N2") </section>
+                    </article>
+                    
+                    <article class="esh-basket-items row">
+                        <section class="esh-basket-item col-sm-7"></section>
+                    </article>
+                </div>
+                <div class="row">
+                    <section class="esh-basket-item col-xs-1">
+                        <a asp-area="" asp-page="/Index" class="btn esh-basket-checkout text-white">Continue Shopping</a>
+                    </section>
+                    <section class="esh-basket-item col-xs-push-7 col-xs-4">
+                        
+                        <button class="btn esh-basket-checkout" name="updatebutton" value="" type="submit"
+                                asp-page-handler="Update">
+                            Update
+                        </button>
+                        @* <a asp-page="./Checkout" class="btn esh-basket-checkout">Checkout</a>
+                        <button class="btn esh-basket-checkout" formaction="./Basket/Checkout">Checkout</button>
+                    </section>
+                </div>
+            </div>
+        </form>
+    }
+    else
+    {
+        <h3 class="esh-catalog-item row">
+            Bakset is empty.
+        </h3>
+        
+        <section class="esh-basket-item">
+            <a asp-page="/Index" asp-area="" class="btn esh-basket-checkout text-while">Continue Shopping</a>
+        </section>
+    }
+</div>
+*@
+@*</td>
+                                    <td class="shoping__cart__item__close">
+                                        <span class="icon_close"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="shoping__cart__item">
+                                        <img src="img/cart/garmin.jpg" alt="">
+                                        <h5>Đồng hồ Garmin</h5>
+                                    </td>
+                                    <td class="shoping__cart__price">
+                                        2.990.000đ
+                                    </td>
+                                    <td class="shoping__cart__quantity">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" value="1">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="shoping__cart__total">
+                                        2.990.000đ
+                                    </td>
+                                    <td class="shoping__cart__item__close">
+                                        <span class="icon_close"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="shoping__cart__item">
+                                        <img src="img/cart/apple_watch_series_7.jpg" alt="">
+                                        <h5>Apple Watch Series 7</h5>
+                                    </td>
+                                    <td class="shoping__cart__price">
+                                        18.990.000đ
+                                    </td>
+                                    
+                                    <td class="shoping__cart__item__close">
+                                        <span class="icon_close"></span>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__btns">
+                        <a href="./index.html" class="primary-btn cart-btn">TIẾP TỤC MUA SẮM?</a>
+                        <a href="#" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
+                            Cập nhật lại giỏ hàng</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="shoping__checkout">
+                        <h5>Tổng tiền giỏ hàng</h5>
+                        <ul>
+                            <li>Tổng cộng <span>Tự cộng đi =))</span></li>
+                            <li>VAT<span>0</span></li>
+                            <li>Phí vận chuyển<span>0</span></li>
+                            <li>Khuyến mãi<span>0</span></li>
+                            <li>Tổng thanh toán <span>Tự cộng nốt</span></li>
+                        </ul>
+                        <a href="./checkout.html" class="primary-btn">THANH TOÁN ĐƠN HÀNG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@

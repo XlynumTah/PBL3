@@ -1,0 +1,23 @@
+﻿@model ECom.Web.ViewModels.UserRolesViewMode
+
+@{
+    ViewData["Title"] = "User Roles Manager for User " + @Model.Username;
+    Layout = "_Layout";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="card">
+    <div id="viewAll" class="card-body table-responsive">
+        <form asp-controller="UserRoles" method="post" asp-action="Index" asp-route-id="@Model.UserId" class="">
+            <input asp-for="@Model.UserId" type="hidden" />
+            <input asp-for="@Model.Username" type="hidden"/>
+            <select asp-for="@Model.CurrentRole" asp-items="@Model.Roles"></select>
+            <div class="col-sm-12" style=" padding: 20px 20px 0px 0px">
+                <button type="submit" id="save" class="btn bg-primary">
+                    <i class="fa fa-check"></i>
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

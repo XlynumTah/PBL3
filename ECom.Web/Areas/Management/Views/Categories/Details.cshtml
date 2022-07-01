@@ -1,0 +1,44 @@
+@model ECom.Models.Category
+
+@{
+    Layout = "/Areas/Management/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["Title"] = "Details";
+}
+
+<section class="breadcrumb-section set-bg" data-setbg="/img/product/details/iphone13promax/apple-banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>@ViewData["Title"]</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<br/>
+
+<section class="checkout spad">
+<div class="container">
+    <div class="checkout__form">
+    <h4>Manufacture</h4>
+    <hr />
+    <div class="checkout__input">
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+    </div>
+    <div class="checkout__input">
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+    </div>
+</div>
+</section>
+

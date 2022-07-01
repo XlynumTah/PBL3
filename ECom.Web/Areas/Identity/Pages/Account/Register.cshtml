@@ -1,0 +1,38 @@
+﻿@page
+@model RegisterModel
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/loginstyle.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+@{
+    ViewData["Title"] = "Đăng Kí";
+}
+<h1></h1>
+<h1></h1>
+<div class="row">
+    <div class="w3layoutscontaineragileits">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h2>TẠO TÀI KHOẢN MỚI TẠI ĐÂY</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                <input type="username" asp-for="Input.Email" autocomplete="username" aria-required="true" placeholder = "Tài khoản"/>
+                <span type="validation" asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input type="password" asp-for="Input.Password" autocomplete="new-password" aria-required="true" placeholder = "Mật khẩu"/>
+                <span type="validation" asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating">
+                <input type="password" asp-for="Input.ConfirmPassword" autocomplete="new-password" aria-required="true" placeholder = "Xác nhận mật khẩu"/>
+                <span type="validation" asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <input type="submit" id="registerSubmit" class="w-100 btn btn-lg btn-primary" value="ĐĂNG KÍ">
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

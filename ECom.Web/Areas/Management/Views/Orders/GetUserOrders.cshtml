@@ -1,0 +1,20 @@
+﻿@using ECom.Web.ViewModels
+@model List<OrderViewModel>
+@{
+    ViewData["Title"]="User order";
+}
+<h1>@ViewData["Title"]</h1>
+@foreach(var order in Model)
+{
+    <br />
+    <text>Id: @order.Id</text>
+
+
+    <form asp-action="UpdateOrderStatus" method="post">
+        <input type="hidden" name="orderId" id="orderId" value="@order.Id">
+        <select asp-items="@order.OrderStatusSelectListItems" name="statusName"></select>
+        <input type="submit" value="Update" class="btn btn-primary" />
+    </form>
+    <a asp-action="Detail" asp-route-orderId="@order.Id">Detail</a>
+}
+

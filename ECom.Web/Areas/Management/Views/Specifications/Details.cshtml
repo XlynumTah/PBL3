@@ -1,0 +1,55 @@
+@model ECom.Models.Specification
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Specification</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Processor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Storage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Storage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RAM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RAM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Screen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Screen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Camera)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Camera)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product.Name) |
+            <a asp-controller="Products" asp-action="Details" asp-route-id="@Model.Product.Id">More info</a>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

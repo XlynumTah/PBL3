@@ -1,0 +1,56 @@
+﻿@model ProductItemViewModel
+
+
+ <form asp-area="Customer" asp-page="/Basket/Index" method="post">
+<div class="product__discount__item__text">
+    <div class="product__discount__item">
+                    <div class="product__discount__item__pic set-bg">
+                        <a asp-area="Customer" asp-page="/Products/Detail" asp-route-id="@Model.Id">   
+                            <img class="" src="@Model.ImageUrl" alt="@Model.ImageUrl"/>
+                        </a>
+                        <div class="product__discount__percent">-@Model.Discount.ToString()%</div>
+                    </div>
+                    <div class="product__discount__item__text">
+                        <h5><a href="#">@Model.Name</a></h5>
+                        <div class="product__item__price">@Model.DPrice.ToString()đ<span>@Model.Price.ToString()đ</span></div>
+                        <input class="" type="submit" value="Thêm vào giỏ"/>      
+                    </div>
+                </div>
+</div>
+    <input type="hidden" asp-for="@Model.Id" name="id"/>    
+    <input type="hidden" asp-for="@Model.Name" name="name" />
+    <input type="hidden" asp-for="@Model.ImageUrl" name="pictureUri" />
+    <input type="hidden" asp-for="@Model.Price" name="price" />
+</form>
+@*<div class="product__discount__item__text">
+        <h5>@Model.Name</h5>
+                        <div class="product__discount__item">
+    <div class="product__item__price">*@
+    @*    <div class="product__discount__item__pic set-bg"
+            <div class="product__discount__percent">-@Model.Discount.ToString()%</div></div>
+            <div class="esh-catalog-price">
+        <div class="product__item__price"><span></span></div>
+    </div></div>
+    </div>
+    <input type="hidden" asp-for="@Model.Id" name="id"/>    
+    <input type="hidden" asp-for="@Model.Name" name="name" />
+    <input type="hidden" asp-for="@Model.ImageUrl" name="pictureUri" />
+    <input type="hidden" asp-for="@Model.Price" name="price" />
+</form>*@
+@*<section class="featured spad">
+        <div class="container">
+            <div class="row">
+                    <div class="row featured__filter">
+                <div class="col-lg-3 col-md-4 col-sm-6 dienthoai mix all">
+                <div class="product__discount__item">
+                    
+                    <div class="product__discount__item__text">
+                        <h5><a href="#">IPhone 11</a></h5>
+                        <div class="product__item__price">13.032.000đ<span>16.290.000đ</span></div>
+                    </div>
+                }
+                </div>
+                </div>
+                </div>
+                </div>
+</section>*@

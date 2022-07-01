@@ -1,0 +1,22 @@
+﻿@model int
+
+@{
+    IFormFile image=null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Edit Image</title>
+</head>
+<body>
+<div>
+    <form method="post" asp-action="EditImage" enctype="multipart/form-data">
+        <input type="hidden" id="id" name="id" value="@Model"/>
+        <input class="form-control" asp-for="@image" type="file"/>
+        <button class="btn btn-primary" type="Submit" asp-for="file">Submit</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿@page
+@using ECom.Web.Areas.Identity.Pages.Account
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Trang Đăng Nhập";
+}
+<head>
+<meta charset="UTF-8">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/loginstyle.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+</head>
+<div class="row">
+    <h1></h1>
+    <div class="w3layoutscontaineragileits">
+        <h2>ĐĂNG NHẬP</h2>
+        <section>
+            <form id="account" method="post">
+                @* <h2>Use a local account to log in.</h2> *@
+                <hr />
+                @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+                <div>
+                    <input type="username" asp-for="Input.Email" autocomplete="username" aria-required="true" placeholder = "Tài khoản"/>
+                    <span type="validation" asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div>
+                    <input type="password" asp-for="Input.Password" autocomplete="current-password" aria-required="true" placeholder = "Mật khẩu"/>
+                    <span type="validation" asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div>
+                <ul class="agileinfotickwthree">    
+                        <li>
+                            <input type="checkbox" id="brand1" class="form-check-input" asp-for="Input.RememberMe"/>
+                            <label for="brand1"><span></span>Nhớ đăng nhập</label>
+                            <a id="forgot-password" asp-page="./ForgotPassword"> Quên mật khẩu?</a>
+                        </li>
+                 </ul>
+                </div>
+                <div class="aitssendbuttonw3ls">
+				<input type="submit" id="login-submit" class="w-100 btn btn-lg btn-primary" value="ĐĂNG NHẬP">
+				<p>Chưa có tài khoản?<span>→</span> <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="w3_play_icon1"> Đăng kí </a></p>
+				<div class="clear"></div>
+			    </div>
+                    @*<p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                    </p>*@
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
