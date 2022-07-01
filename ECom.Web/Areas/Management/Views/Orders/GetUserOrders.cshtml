@@ -1,10 +1,23 @@
 ﻿@using ECom.Web.ViewModels
 @model List<OrderViewModel>
 @{
-    ViewData["Title"]="User order";
+    ViewData["Title"] = "User order";
 }
-<h1>@ViewData["Title"]</h1>
-@foreach(var order in Model)
+<section class="breadcrumb-section set-bg" data-setbg="/img/product/details/iphone13promax/apple-banner.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>@ViewData["Title"]</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br />
+@*
+@foreach (var order in Model)
 {
     <br />
     <text>Id: @order.Id</text>
@@ -18,3 +31,44 @@
     <a asp-action="Detail" asp-route-orderId="@order.Id">Detail</a>
 }
 
+*@
+<table class="table table-striped" id="userTable">
+    <thead>
+        <tr>
+            <th>User Id</th>
+            <th>Status</th>
+            <th style="width:10%">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col-sm">
+                            <a>
+                                @order.Id
+                            </a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <a>
+                        <form asp-action="UpdateOrderStatus" method="post">
+                            <input type="hidden" name="orderId" id="orderId" value="@order.Id">
+                            <select asp-items="@order.OrderStatusSelectListItems" name="statusName"></select>
+                        </form>
+                    </a>
+                </td>
+                <td>
+                    <input type="submit" value="Update" class="btn btn-primary" />
+                    <a asp-action="Detail" asp-route-orderId="@order.Id">Detail</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+<br />
